@@ -125,7 +125,6 @@ fprintf('\n');
 X1 = [1650 3];
 X1_norm = (X1 - mu)./sigma; 
 X1_norm = [1 X1_norm]; % normalization and add X0
-%X1_norm = (ones(1,1) X1_norm)
 price = X1_norm*theta; % You should change this
 
 % ============================================================
@@ -170,7 +169,8 @@ fprintf('\n');
 
 % Estimate the price of a 1650 sq-ft, 3 br house
 % ====================== YOUR CODE HERE ======================
-price = 0; % You should change this
+Pre_X = [1; 1650; 3]
+price = theta'*Pre_X; % You should change this
 
 
 % ============================================================
