@@ -95,7 +95,7 @@ J1_history = zeros(num_iters,5);
 for i = 1:5
   theta = zeros(3, 1);
   [theta, J1_history(:,i)] = gradientDescentMulti(X, y, theta, alpha, num_iters);
-   alpha = alpha + 0.1;
+   alpha = alpha + 0.01;
 end
 
 % Plot the convergence graph
