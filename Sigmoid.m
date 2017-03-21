@@ -1,13 +1,18 @@
-% Sigmoid Function
-clear; close; clc;
+function g = sigmoid(z)
+%SIGMOID Compute sigmoid function
+%   g = SIGMOID(z) computes the sigmoid of z.
 
-sigmoid = zeros(20,1);
-z = zeros(20,1);
+% You need to return the following variables correctly 
+g = zeros(size(z));
 
-for i = 1:21
-  
-  sigmoid(i) = 1/(1+exp(-1.0*(i-11)));
-  z(i) = i -11;
+% ====================== YOUR CODE HERE ======================
+% Instructions: Compute the sigmoid of each value of z (z can be a matrix,
+%               vector or scalar).
+
+
+g = 1.0./(1.0+exp(-z));
+
+
+% =============================================================
+
 end
-
-plot(z, sigmoid, 'b', 'LineWidth', 2)
